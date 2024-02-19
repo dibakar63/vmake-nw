@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Models.css";
 import { UploadOutlined } from "@ant-design/icons";
-
+import axios from "axios";
 import model from "../Assets/Rectangle 49.png";
 import { DeleteOutlined } from "@ant-design/icons";
 import { useState } from "react";
