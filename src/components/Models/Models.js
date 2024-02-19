@@ -26,13 +26,44 @@ import b5 from "../Assets/b (5).png";
 import b6 from "../Assets/b (6).png";
 import b7 from "../Assets/b (7).png";
 import b8 from "../Assets/b (8).png";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Models = () => {
   const [value, setValue] = useState(0);
   const [value1, setValue1] = useState(0);
   const [value2, setValue2] = useState(0);
+
+  const location = useLocation();
+  const [presetsmodel, setpresetsmodel] = useState();
+  const [presetbackground, setpresetbackground] = useState();
+  const [presetsmodelcount, setpresetsmodelcount] = useState(10);
+  const [presetscenecount, setpresetscenecount] = useState(10);
+  const [backgroundTypes, setbackgroundTypes] = useState("original");
+  const [presetBackgroundId, setpresetBackgroundId] = useState(null);
   const navigate = useNavigate();
+  //  const [taskId,settaskId]=useState('');
+  useEffect(() => {
+    console.log(location.state.img);
+    try {
+      const res = axios
+        .get(`http://localhost:8002/wrapper/presetmodels`)
+        .then((response) => {
+          setpresetsmodel(response.data.data.presets);
+        });
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+    try {
+      const res = axios
+        .get(`http://localhost:8002/wrapper/presetbackgrounds`)
+        .then((response) => {
+          setpresetbackground(response.data.data.presets);
+        });
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  }, []);
+
   const handleChange = (event) => {
     setValue(parseInt(event.target.value));
   };
@@ -41,6 +72,56 @@ const Models = () => {
   };
   const handleChange2 = (event) => {
     setValue1(parseInt(event.target.value));
+  };
+  const handleModelClick = () => {
+    setpresetsmodelcount(presetsmodelcount + 10);
+  };
+  const handleSceneClick = () => {
+    setpresetscenecount(presetscenecount + 10);
+  };
+  const handleModelSelect = async (img) => {
+    let body = {};
+    body.image = location.state.img;
+    body.maskColorModel = "white-black";
+    body.maskType = "clothes";
+    body.mask = null;
+    body.count = 4;
+    body.presetModelId = img.presetId;
+    body.backgroundTypes = [backgroundTypes];
+    body.presetBackgroundId = presetBackgroundId;
+    body.callbackUrl = null;
+    body.modelSize = "similar";
+    body.modelExpression = "similar";
+    console.log(body, img, "body");
+    await axios
+      .post(`http://localhost:8002/wrapper/vmake`, body)
+      .then((response) => {
+        if (response.status == "200") {
+          handleDownload(response.data.data.taskId);
+        }
+      });
+  };
+  const handleDownload = async (taskId) => {
+    try {
+      const response = await axios.get(
+        `http://localhost:8002/wrapper/vmakeTaskId?name=${taskId}`
+      );
+      const { status, data, progress } = response.data;
+      console.log(status, data, progress);
+      if (data.status === "success" && data.progress === 100) {
+        navigate(`/`, { state: { data: data } });
+      } else {
+        await handleDownload(taskId);
+        // Set taskId if status is neither 100 nor 40
+      }
+    } catch (error) {
+      // Handle any errors
+      console.error("Error fetching task ID:", error);
+    }
+  };
+  const handleSceneSelect = (img) => {
+    setbackgroundTypes("preset");
+    setpresetBackgroundId(img.presetId);
   };
   return (
     <div className="container container-main">
@@ -166,45 +247,32 @@ const Models = () => {
               image.
             </p>
             <div className="variety-img">
-              <img src={a4} />
-              <img src={a2} />
-              <img src={a3} />
-              <img src={a1} />
-              <img src={a5} />
-              <img src={a6} />
-              <img src={a7} />
-              <img src={a8} />
+              {presetsmodel?.slice(0, presetsmodelcount).map((img) => {
+                return (
+                  <img
+                    src={img.thumbnail}
+                    onClick={() => handleModelSelect(img)}
+                  />
+                );
+              })}
             </div>
-            {/* <div className="row">
-              <div className="col-md-2 col-sm-12">
-                <img src={a2} />
-              </div>
-              <div className="col-md-2 col-sm-12">
-                <img src={a1} />
-              </div>
-              <div className="col-md-2 col-sm-12">
-                <img src={a3} />
-              </div>
-              <div className="col-md-2 col-sm-12">
-                <img src={a4} />
-              </div>
-            </div> */}
-
-            <button className="button">View More Models</button>
-
+            <button className="button" onClick={handleModelClick}>
+              View More Models
+            </button>
             <h3 style={{ textAlign: "left", marginTop: "20px" }}>Scenes</h3>
             <div className="scenes-img">
-              <img src={b1} />
-              <img src={b2} />
-              <img src={b3} />
-              <img src={b4} />
-              <img src={b5} />
-              <img src={b6} />
-              <img src={b7} />
-              <img src={b8} />
+              {presetbackground?.slice(0, presetscenecount).map((img) => {
+                return (
+                  <img
+                    src={img.thumbnail}
+                    onClick={() => handleSceneSelect(img)}
+                  />
+                );
+              })}
             </div>
-
-            <button className="button">View more Models</button>
+            <button className="button" onClick={handleSceneClick}>
+              View more Models
+            </button>
           </div>
         </div>
       </div>

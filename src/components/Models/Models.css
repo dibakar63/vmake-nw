@@ -169,7 +169,7 @@ justify-content: center;
   }
   .variety-img{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(5,1fr);
     gap:5px;
   }
   
@@ -189,7 +189,7 @@ justify-content: center;
 }
 .scenes-img{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(5,1fr);
     gap: 5px;
 }
 .scenes-img img{
@@ -200,7 +200,7 @@ justify-content: center;
   .modelpage{
     display: flex;
     flex-direction: column;
-    height: fit-content;
+    height: auto;
    
     justify-content: center;
     align-items: center;

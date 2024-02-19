@@ -40,11 +40,16 @@ const Home = () => {
     const handleChange = (event) => {
       setValue(parseInt(event.target.value));
     };
+    const handleOnClick=(obj)=>{
+        navigate(`/models`,{state:{img:obj}})
+     }
   return (
     <div className='container-fluid home'>
     <div className='row title'>
+    
         <h1>The Next Generation of</h1>
         <h1 className='ai-title'>AI Fashion Model</h1>
+        
     </div>
     <div className='model'>
         <div className='main-model'>
@@ -75,11 +80,11 @@ const Home = () => {
         <div className='row inner-model-container'>
           <h5>Try one demo image for <span style={{color:"#54BD95" ,textDecoration:"underline"}}>Upload Image</span></h5>
           <div className='model-container-img'>
-          <img src='https://gcs.vmake.ai/80fd38a0ed427b22b2e476eb795fe6c0.png' onClick={()=>navigate('/models')}/>
-          <img src='https://gcs.vmake.ai/d96b851ca118c8b66ba79b9288895870.png' onClick={()=>navigate('/models')}/>
-          <img src='https://gcs.vmake.ai/77542935453397eb4bbb8c6b512e84fe.png' onClick={()=>navigate('/models')}/>
-          <img src='https://gcs.vmake.ai/dc1d4d0f03bb9d8cb679dc459ed430e5.png' onClick={()=>navigate('/models')}/>
-          <img src={model2} onClick={()=>navigate('/models')}/>
+          <img src={"https://gcs.vmake.ai/80fd38a0ed427b22b2e476eb795fe6c0.png"}  onClick={() => handleOnClick("https://gcs.vmake.ai/80fd38a0ed427b22b2e476eb795fe6c0.png")}/>
+          <img src='https://gcs.vmake.ai/d96b851ca118c8b66ba79b9288895870.png' onClick={() => handleOnClick("https://gcs.vmake.ai/d96b851ca118c8b66ba79b9288895870.png")}/>
+          <img src='https://gcs.vmake.ai/77542935453397eb4bbb8c6b512e84fe.png' onClick={() => handleOnClick("https://gcs.vmake.ai/77542935453397eb4bbb8c6b512e84fe.png")}/>
+          <img src='https://gcs.vmake.ai/dc1d4d0f03bb9d8cb679dc459ed430e5.png' onClick={() => handleOnClick("https://gcs.vmake.ai/dc1d4d0f03bb9d8cb679dc459ed430e5.png")}/>
+          <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc8n0vs_OosxglpAFs_KP4Cp8PGTx3BsIh8A&usqp=CAU' onClick={() => handleOnClick("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc8n0vs_OosxglpAFs_KP4Cp8PGTx3BsIh8A&usqp=CAU")}/>
           <img src={model6} onClick={()=>navigate('/models')}/>
           <img src={model7} onClick={()=>navigate('/models')}/>
           <img src={model8} onClick={()=>navigate('/models')}/>
@@ -90,6 +95,7 @@ const Home = () => {
         </div>
     </div>
     <div className='row content'>
+    
         <h3>How to generate <span className='ai-title'>AI Models</span> from maniquines?</h3>
         <div className='inner-content'>
             <div className='content-inner'>

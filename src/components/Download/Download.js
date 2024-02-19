@@ -11,11 +11,15 @@ import { useState } from 'react';
 const Download = () => {
   const [value, setValue] = useState(0);
   const [value1, setValue1] = useState(0);
+  const [value2, setValue2] = useState(100);
   const handleChange = (event) => {
     setValue(parseInt(event.target.value));
   };
   const handleChange1 = (event) => {
     setValue1(parseInt(event.target.value));
+  };
+  const handleChange2 = (event) => {
+    setValue2(parseInt(event.target.value));
   };
   return (
     <div className='container download'>
@@ -104,8 +108,8 @@ const Download = () => {
                       type="range"
                       min="0"
                       max="100"
-                      value={value1}
-                      onChange={handleChange1}
+                      value={value2}
+                      onChange={handleChange2}
                       className="slider2"
                     />
                   </div>

@@ -40,7 +40,7 @@
     .footer{
         width: 100%;
         bottom:0;
-        position: fixed;
+        
         
         
     }
@@ -71,19 +71,12 @@
         
 
 }
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1300px) {
     
     .row.no-margin{
         margin-left: 0;
         margin-right: 0;
     }
-    .footer{
-        bottom:0;
-        
-        width: 100%;
-        position: fixed;
-    }
-   
 }
 
 
