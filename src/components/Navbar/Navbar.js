@@ -27,7 +27,7 @@ const Navbar = () => {
 //     navigate('/')
 //   };
   return (
-    <div classname='navbar-main'>
+    <div classname='container-fluid navbar-main'>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
   <div className="container-fluid">
     <img className="navbar-brand logo " src={Logo} onClick={()=>navigate('/')} />

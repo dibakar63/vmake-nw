@@ -8,3 +8,23 @@
     height: 973px;
     
 }
+.download-container{
+    border-radius: 12px;
+    background: #F7F7F7;
+    padding: 10px;
+}
+.auto-header1{
+    display: flex;
+    
+    flex-direction:row;
+    
+
+}
+.column{
+    box-shadow: 2px -1px 19px 0px rgba(0,0,0,0.41);
+    -webkit-box-shadow: 2px -1px 19px 0px rgba(0,0,0,0.41);
+    -moz-box-shadow: 2px -1px 19px 0px rgba(0,0,0,0.41);
+padding: 10px;
+border-radius: 12px;
+}
+

@@ -47,34 +47,29 @@
       margin-left: 0; /* Adjust margin for smaller screens */
     }
     .navbar-main{
-      width: 830px!important;
+      width: 100%;
     }
   }
   @media screen and (max-width:390px){
-    .navbar-main{
-        width: 830px!important;
-        height: fit-content;
-        
-    }
+    
     .navbar-nav{
         margin-left: 0px;
     }
 }
 @media screen and (max-width:468px){
-    .navbar-main{
-         width: 830px!important;
-         height: fit-content;
-    }
+   
     .navbar-nav{
         margin-left: 0px;
     }
 } 
  @media  screen and (max-width:578px) {
-  .navbar-main{
-    width: 830px!important;
-  }  
+   
 .navbar-nav{
     margin-left: 0px;
+    
+}
+.navbar-main{
+  width: 100%;
 }
 } 
    

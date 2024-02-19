@@ -27,7 +27,7 @@
 .footer li{
     list-style: none;
 }
-@media  (max-width:578px ) {
+@media  (max-width:768px ) {
     .container-fluid{
         padding-right: 0;
         padding-left: 0;
@@ -42,9 +42,10 @@
         bottom:0;
         position: fixed;
         
+        
     }
 }
-@media screen and (min-width:468px) {
+@media screen and (max-width:468px) {
     
     .row.no-margin{
         margin-left: 0;
@@ -52,9 +53,9 @@
     }
     .footer{
         bottom:0;
-        position: fixed;
-        width: 100%;
         
+        width: 100%;
+        position: fixed;
         
     }
         
@@ -66,19 +67,21 @@
         margin-left: 0;
         margin-right: 0;
     }
-    .footer{
-        bottom:0;
-        position: fixed;
-        
-    }
+    
         
 
 }
-@media screen and (max-width:1300px) {
+@media screen and (max-width:1024px) {
     
     .row.no-margin{
         margin-left: 0;
         margin-right: 0;
+    }
+    .footer{
+        bottom:0;
+        
+        width: 100%;
+        position: fixed;
     }
 }
 
