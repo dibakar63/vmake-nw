@@ -35,7 +35,7 @@ const Download = () => {
         <DeleteOutlined style={{color:"red",fontSize:"25px"}}/>
     </div>
     </div>
-    <div className='row'>
+    <div className='row download-container'>
     <div className='col col-md-12 col-sm-12'>
     <div className='slider-container'>
       <input
@@ -58,7 +58,7 @@ const Download = () => {
     </div> 
      </div>
     </div>
-    <div className='row download-container g-4' >
+    <div className='row download-container2 g-4' >
     <div className='row row-md-12 row-sm-12 d-flex ms-auto g-10 '>
       <button className='btn btn-light' style={{border:"1px solid #54BD95",color:"#54BD95",width:"250px",height:"40px",marginTop:"20px"}}>Generate with new models</button>
       <button className='btn btn-success' style={{background:"#54BD95",marginLeft:"20px",width:"190px",height:"40px",marginTop:"20px"}}>Download All images</button>
@@ -66,11 +66,24 @@ const Download = () => {
       <div className='col col-md-12 col-sm-12 column'>
       
       <img src={model1} style={{width:"50px",height:"50px",textAlign:"left"}} className='small-img'/><label for='img'>Name</label>
-         <div className='g-5'>
-          <img src={box} />
-          <img src={box} />
-          <img src={box} />
-          <img src={box} />
+         <div className='row g-2 p-2 '>
+         
+         <div className='col-md-3 col-sm-12 image'>
+          <img src='https://gcs.vmake.ai/80fd38a0ed427b22b2e476eb795fe6c0.png' style={{borderRadius:"12px"}}/>
+          <div className="overlay">Download</div>
+          </div>
+          <div className='col-md-3 col-sm-12 image'>
+          <img src='https://gcs.vmake.ai/80fd38a0ed427b22b2e476eb795fe6c0.png' style={{borderRadius:"12px"}}/>
+          <div className="overlay">Download</div>
+          </div>
+          <div className='col-md-3 col-sm-12 image'>
+          <img src='https://gcs.vmake.ai/80fd38a0ed427b22b2e476eb795fe6c0.png' style={{borderRadius:"12px"}}/>
+          <div className="overlay">Download</div>
+          </div>
+          <div className='col-md-3 col-sm-12 image'>
+          <img src='https://gcs.vmake.ai/80fd38a0ed427b22b2e476eb795fe6c0.png' style={{borderRadius:"12px"}}/>
+          <div className="overlay">Download</div>
+          </div>
          </div>
          <div >
          <div className="auto-header1">
@@ -94,11 +107,24 @@ const Download = () => {
       </div>
       <div className='col col-md-12 col-sm-12 column'>
       <img src={model2} style={{width:"50px",height:"50px",textAlign:"left"}} className='small-img'/><label for='img'>Name</label>
-         <div >
-          <img src={box}/>
-          <img src={box}/>
-          <img src={box}/>
-          <img src={box}/>
+      <div className='row g-2 p-2'>
+         
+         <div className='col-md-3 col-sm-12 image'>
+          <img src='https://gcs.vmake.ai/80fd38a0ed427b22b2e476eb795fe6c0.png' style={{borderRadius:"12px"}}/>
+          <div className="overlay">Download</div>
+          </div>
+          <div className='col-md-3 col-sm-12 image'>
+          <img src='https://gcs.vmake.ai/80fd38a0ed427b22b2e476eb795fe6c0.png' style={{borderRadius:"12px"}}/>
+          <div className="overlay">Download</div>
+          </div>
+          <div className='col-md-3 col-sm-12 image'>
+          <img src='https://gcs.vmake.ai/80fd38a0ed427b22b2e476eb795fe6c0.png' style={{borderRadius:"12px"}}/>
+          <div className="overlay">Download</div>
+          </div>
+          <div className='col-md-3 col-sm-12 image'>
+          <img src='https://gcs.vmake.ai/80fd38a0ed427b22b2e476eb795fe6c0.png' style={{borderRadius:"12px"}}/>
+          <div className="overlay">Download</div>
+          </div>
          </div>
          <div>
          <div className="auto-header1">

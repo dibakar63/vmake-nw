@@ -1,8 +1,35 @@
 .download{
     width: 1302px;
-    height: 1070px;
+    height: 1270px;
 
 }
+.image{
+    display: block;
+    position: relative;
+    
+}
+
+.overlay {
+    position: absolute; 
+    bottom: 0; 
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1; 
+    width: 294px;
+    border-radius: 12px;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    left:3%;
+    text-align: center;
+  }
+  
+  .image:hover .overlay {
+    opacity: 1;
+  }
+
 .gallery{
     width: 1302px;
     height: 973px;
@@ -12,6 +39,19 @@
     border-radius: 12px;
     background: #F7F7F7;
     padding: 10px;
+    height: 100px;
+    margin-bottom: 40px;
+    
+    
+}
+.download-container2{
+    border-radius: 12px;
+    background: #F7F7F7;
+    padding: 10px;
+    height: 700px;
+    margin-bottom: 40px;
+    
+    
 }
 .auto-header1{
     display: flex;
@@ -27,4 +67,36 @@
 padding: 10px;
 border-radius: 12px;
 }
-
+@media screen and (max-width:1024px){
+    .download-container{
+        height: fit-content;
+        
+    }
+    .download-container2{
+        height: fit-content;
+    }
+    .overlay{
+        width: 200px;
+        
+    }
+    .image img{
+      width: 200px;
+      height: auto;
+    }
+}
+@media screen and (max-width:468px){
+    .download{
+        width: 100%;
+        height: auto;
+    }
+}
+@media screen and (max-width:968px){
+    .image img{
+        
+        width: 150px;
+    }
+    .overlay{
+        width: 150px;
+        left:4%;
+    }
+}
