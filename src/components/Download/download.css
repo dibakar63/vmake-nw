@@ -83,6 +83,7 @@
   }
   .imagediv{
     width: 250px;
+
   }
   .image img{
     width: 250px;
@@ -167,7 +168,7 @@ border-radius: 12px;
 @media screen and (max-width:468px){
     .download{
         width: 100%;
-        height: auto;
+        height: fit-content;
     }
     .image{
         display: flex;
@@ -183,12 +184,16 @@ border-radius: 12px;
     }
     .download{
         width: auto;
-        height: 800px;
+        height: fit-content;
     }
     .download-container2{
-        height: auto;
+        height: fit-content;
+       
         width: auto;
        
+    }
+    .column{
+        
     }
     .image{
         display: flex;
