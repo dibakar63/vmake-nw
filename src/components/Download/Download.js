@@ -9,7 +9,7 @@ import model from '../Assets/Rectangle 49.png'
 import {DeleteOutlined} from '@ant-design/icons'
 import { useState } from 'react';
 const Download = () => {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(100);
   const [value1, setValue1] = useState(0);
   const [value2, setValue2] = useState(100);
   const handleChange = (event) => {
@@ -37,7 +37,7 @@ const Download = () => {
     </div>
     <div className='row download-container'>
     <div className='col col-md-12 col-sm-12'>
-    <div className='slider-container'>
+    <div className='slider-container3'>
       <input
         type="range"
         min="0"
@@ -45,15 +45,15 @@ const Download = () => {
         step="1"
         value={value}
         onChange={handleChange}
-        className='slider'
+        className='slider3'
       />
-      <div className='slider-header'>
+      <div className='slider-header3'>
         {/* {value < 33 && <p>Low Range</p>}
         {value >= 33 && value < 66 && <p>Mid Range</p>}
         {value >= 66 && <p>High Range</p>} */}
-        <p value={33} style={{color:"#54BD95"}}>Choose Image</p>
+        <p value={33} >Choose Image</p>
         <p value={66}>Choose Model</p>
-        <p value={100}>Download Image</p>
+        <p value={100} style={{color:"#54BD95"}}>Download Image</p>
       </div>
     </div> 
      </div>
@@ -69,26 +69,34 @@ const Download = () => {
          <div className='row g-2 p-2 '>
          
          <div className='col-md-3 col-sm-12 image'>
+         <div className='imagediv'>
           <img src='https://gcs.vmake.ai/80fd38a0ed427b22b2e476eb795fe6c0.png' style={{borderRadius:"12px"}}/>
           <div className="overlay">Download</div>
           </div>
+          </div>
           <div className='col-md-3 col-sm-12 image'>
+          <div className='imagediv'>
           <img src='https://gcs.vmake.ai/80fd38a0ed427b22b2e476eb795fe6c0.png' style={{borderRadius:"12px"}}/>
           <div className="overlay">Download</div>
           </div>
+          </div>
           <div className='col-md-3 col-sm-12 image'>
+          <div className='imagediv'>
           <img src='https://gcs.vmake.ai/80fd38a0ed427b22b2e476eb795fe6c0.png' style={{borderRadius:"12px"}}/>
           <div className="overlay">Download</div>
           </div>
+          </div>
           <div className='col-md-3 col-sm-12 image'>
+          <div className='imagediv'>
           <img src='https://gcs.vmake.ai/80fd38a0ed427b22b2e476eb795fe6c0.png' style={{borderRadius:"12px"}}/>
           <div className="overlay">Download</div>
+          </div>
           </div>
          </div>
          <div >
-         <div className="auto-header1">
+         {/* <div className="auto-header1"> */}
                   
-                  <div className="slider-container2">
+                  {/* <div className="slider-container2">
                     <input
                       type="range"
                       min="0"
@@ -97,15 +105,15 @@ const Download = () => {
                       onChange={handleChange1}
                       className="slider2"
                     />
-                  </div>
-                  <h6 style={{ color: "gray" ,marginLeft:"20px"}}>Keep Original Background</h6>
+                  </div> */}
+                  {/* <h6 style={{ color: "gray" ,marginLeft:"20px"}}>Keep Original Background</h6>
                   <button className='btn btn-light' style={{border:"1px solid #54BD95",color:"#54BD95",width:"100px",height:"40px",marginLeft:"20px"}}>Delete</button>
-                  <button className='btn btn-success' style={{background:"#54BD95",marginLeft:"20px",width:"100px",height:"40px"}}>Download</button>
-                </div>
+                  <button className='btn btn-success' style={{background:"#54BD95",marginLeft:"20px",width:"100px",height:"40px"}}>Download</button> */}
+                {/* </div> */}
          </div>
 
       </div>
-      <div className='col col-md-12 col-sm-12 column'>
+      {/* <div className='col col-md-12 col-sm-12 column'>
       <img src={model2} style={{width:"50px",height:"50px",textAlign:"left"}} className='small-img'/><label for='img'>Name</label>
       <div className='row g-2 p-2'>
          
@@ -144,7 +152,7 @@ const Download = () => {
                   <button className='btn btn-success' style={{background:"#54BD95",marginLeft:"20px",width:"100px",height:"40px"}}>Download</button>
                 </div>
          </div>
-      </div>
+      </div> */}
     </div>
     </div>
   )

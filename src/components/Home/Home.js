@@ -150,23 +150,23 @@ const Home = () => {
                 <p>What are Ai-generated Fashion Models?   </p>
                {!toggle ? <FaPlus onClick={handleClick}/> : <FaMinus onClick={handleClick}/>}
                 </div>
-                {toggle ? <p style={{fontSize:"10px"}}>AI-generated fashion models are virtual representations of human figures created to showcase clothing items and accessories in a realistic and customizable manner, providing an innovative and cost-effective approach to visual merchandising.</p>:""}
+                {toggle ? <p style={{fontSize:"13px"}}>AI-generated fashion models are virtual representations of human figures created to showcase clothing items and accessories in a realistic and customizable manner, providing an innovative and cost-effective approach to visual merchandising.</p>:""}
                 <div className='faq-2' style={{marginTop:"32px"}}>
                 <p>How do Ai-generated Fashion Models benefits the fashion industry?   </p>
                {!toggle1 ? <FaPlus onClick={handleClick1}/> : <FaMinus onClick={handleClick1}/>}
                 </div>
-                {toggle1 ? <p style={{fontSize:"10px"}}>AI-generated models offer several benefits to the fashion industry. They enhance convenience by streamlining visual merchandising processes, reduce costs associated with traditional photoshoots, and promote inclusivity by representing diverse body types and ethnicities. </p>:""}
+                {toggle1 ? <p style={{fontSize:"13px"}}>AI-generated models offer several benefits to the fashion industry. They enhance convenience by streamlining visual merchandising processes, reduce costs associated with traditional photoshoots, and promote inclusivity by representing diverse body types and ethnicities. </p>:""}
 
                 <div className='faq-2' style={{marginTop:"32px"}}>
                 <p>How do Ai-generated Fashion Models benefits the fashion industry?   </p>
                {!toggle2 ? <FaPlus onClick={handleClick2}/> : <FaMinus onClick={handleClick2}/>}
                 </div>
-                {toggle2 ? <p style={{fontSize:"10px"}}>AI-generated models have the potential to leave a smaller carbon footprint compared to traditional photoshoots involving real models. The carbon footprint of a traditional photoshoot can be significant, considering the resources required for travel, set construction, lighting, and other aspects of the production process. Additionally, photoshoots often involve the use of clothing samples, which may lead to waste if not reused or repurposed.</p> : ""}
+                {toggle2 ? <p style={{fontSize:"13px"}}>AI-generated models have the potential to leave a smaller carbon footprint compared to traditional photoshoots involving real models. The carbon footprint of a traditional photoshoot can be significant, considering the resources required for travel, set construction, lighting, and other aspects of the production process. Additionally, photoshoots often involve the use of clothing samples, which may lead to waste if not reused or repurposed.</p> : ""}
                 <div className='faq-2' style={{marginTop:"32px"}}>
                 <p>How will Ai-generated Fashion Models benefits the environment?   </p>
                {!toggle3 ? <FaPlus onClick={handleClick3}/> : <FaMinus onClick={handleClick3}/>}
                 </div>
-                {toggle3 ? <p style={{fontSize:"10px"}}>AI-generated models enhance the online shopping experience by providing a dynamic and interactive way for customers to view and try on fashion items virtually. With the integration of AR and VR technologies, customers can see how the clothing looks and fits on their personalized AI-generated avatars, fostering a more immersive and satisfying shopping experience from the comfort of their homes.</p>:""}
+                {toggle3 ? <p style={{fontSize:"13px"}}>AI-generated models enhance the online shopping experience by providing a dynamic and interactive way for customers to view and try on fashion items virtually. With the integration of AR and VR technologies, customers can see how the clothing looks and fits on their personalized AI-generated avatars, fostering a more immersive and satisfying shopping experience from the comfort of their homes.</p>:""}
             </div>
             
 

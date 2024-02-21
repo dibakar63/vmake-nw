@@ -42,6 +42,11 @@
     }
     
 }
+@media screen and (min-width:470px) and (max-width:670px){
+    .logo1{
+        width: 100px;
+    }
+}
 @media screen and (max-width:468px) {
     
     .row.no-margin{

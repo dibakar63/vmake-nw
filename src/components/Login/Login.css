@@ -1,0 +1,94 @@
+.login{
+    width: 1137px;
+    height: 639px;
+}
+.loginlogo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    column-gap: 20px;
+   background: #FBF6F9;
+   border-radius: 12px;
+   margin-top: 20px;
+   width: 469px;
+   height: 541.08px;
+    
+    
+    
+}
+.loginm{
+    gap:10px;
+    height: 639px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.object{
+    width: 100%;
+    height: 500px;
+}
+.logomain{
+    margin-top: 20px;
+    height: 60px;
+    width: 170px;
+    border: 1px solid #2863EA;
+    padding: 10px;
+    border-radius: 12px;
+    background: white;
+}
+.logincard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 591px;
+    height: 639px;
+    justify-content: center;
+    text-align: left;
+    row-gap: 5px;
+    background:#FBF6F9 ;
+    margin-top: 20px;
+    border-radius: 24px;
+    box-shadow: 2px 3px 15px -1px rgba(0,0,0,0.75);
+-webkit-box-shadow: 2px 3px 15px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 3px 15px -1px rgba(0,0,0,0.75);
+    
+}
+.inputl{
+    width: 100%;
+    border:1px solid  #54BD95;
+    height: 50px;
+    padding: 12px;
+}
+.mb-3{
+    width: 80%;
+}
+.button1{
+    width: 80%;
+    height: 66px;
+    border-radius: 12px;
+    background: #54BD95;
+    border: none;
+    color: white;
+}
+@media screen and (max-width:1024px){
+    .login{
+        width: 100%;
+        height: 1050px;
+       
+    }
+    .loginlogo{
+        width: 45%;
+        
+        
+    }
+    .logincard{
+        width: 50%;
+        
+        
+    }
+
+}

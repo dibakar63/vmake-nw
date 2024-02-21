@@ -165,6 +165,7 @@ const Models = () => {
               You can choose a variety of presents when you can choose your own
               image.
             </p>
+            <div className="variety-imgdiv">
             <div className="variety-img">
               <img src={a4} />
               <img src={a2} />
@@ -174,6 +175,40 @@ const Models = () => {
               <img src={a6} />
               <img src={a7} />
               <img src={a8} />
+              <img src={a4} />
+              <img src={a2} />
+              <img src={a3} />
+              <img src={a1} />
+              <img src={a5} />
+              <img src={a6} />
+              <img src={a7} />
+              <img src={a8} />
+              <img src={a4} />
+              <img src={a2} />
+              <img src={a3} />
+              <img src={a1} />
+              <img src={a5} />
+              <img src={a6} />
+              <img src={a7} />
+              <img src={a8} />
+              <img src={a4} />
+              <img src={a2} />
+              <img src={a3} />
+              <img src={a1} />
+              <img src={a5} />
+              <img src={a6} />
+              <img src={a7} />
+              <img src={a8} />
+              <img src={a4} />
+              <img src={a2} />
+              <img src={a3} />
+              <img src={a1} />
+              <img src={a5} />
+              <img src={a6} />
+              <img src={a7} />
+              <img src={a8} />
+              
+            </div>
             </div>
             {/* <div className="row">
               <div className="col-md-2 col-sm-12">
@@ -193,6 +228,7 @@ const Models = () => {
             <button className="button">View More Models</button>
 
             <h3 style={{ textAlign: "left", marginTop: "20px" }}>Scenes</h3>
+            <div className="variety-imgdiv">
             <div className="scenes-img">
               <img src={b1} />
               <img src={b2} />
@@ -202,6 +238,24 @@ const Models = () => {
               <img src={b6} />
               <img src={b7} />
               <img src={b8} />
+              <img src={b1} />
+              <img src={b2} />
+              <img src={b3} />
+              <img src={b4} />
+              <img src={b5} />
+              <img src={b6} />
+              <img src={b7} />
+              <img src={b8} />
+              <img src={b1} />
+              <img src={b2} />
+              <img src={b3} />
+              <img src={b4} />
+              <img src={b5} />
+              <img src={b6} />
+              <img src={b7} />
+              <img src={b8} />
+              
+            </div>
             </div>
 
             <button className="button">View more Models</button>

@@ -1,7 +1,9 @@
 import React from 'react'
 import logo from '../Assets/image.png'
 import './Navabr.css'
+import { useNavigate } from 'react-router-dom'
 const Navbar2 = () => {
+  const navigate=useNavigate();
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
   <div className="container-fluid">
@@ -35,7 +37,7 @@ const Navbar2 = () => {
         
         {/* style={{border:"1px solid #54BD95",color:"#54BD95"}} */}
         <li className='nav-item'>
-            <button className='btn btn-success' style={{background:"#54BD95"}}>Login/Signup</button>
+            <button className='btn btn-success' style={{background:"#54BD95"}} onClick={()=>navigate('/login')}>Login/Signup</button>
         </li>
         {/* style={{background:"#54BD95"}} */}
          
